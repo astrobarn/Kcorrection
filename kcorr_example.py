@@ -120,7 +120,7 @@ class Spectrum(astSED.SED) :
         denominator = np.trapz(sed_SN_rf * transmission, lambdas)
 
         return 2.5 * (np.log10(1 + z) + np.log10(nominator/denominator))
-    '''
+    
      def __kcorr_2band(self, band1, band2, z):
         #
         #Generalised k-correction.
@@ -167,7 +167,7 @@ class Spectrum(astSED.SED) :
         filt_czp = nominator_colour / denominator_colour
 
         return 2.5 * (np.log10(1 + z) + np.log10(spec) - np.log10(filt_czp))
-    '''
+    
     def kcorr(self, band1, band2=None, z=0.0) :
         """
         Calculate the kcorrection from x to y, where x and y are
